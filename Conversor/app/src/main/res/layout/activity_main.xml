@@ -4,47 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BABABA"
+    android:background="#FFFFFF"
+    android:onClick="onClick"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvIntroducao"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="235dp"
-        android:background="#CFBFED"
-        android:editable="false"
-        android:fontFamily="sans-serif-black"
-        android:text="Para converter as medidas desejadas digite o valor e selecione a medida atual e a medida desejada"
-        android:textAlignment="center"
-        android:textAllCaps="false"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="26dp"
+        android:text="Allan Pereira - Guilherme Verçosa "
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnInverter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/tvInserirNumero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:editable="true"
-        android:ems="10"
-        android:hint="Valor"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="#090000"
-        android:textSize="18sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/spMedidaAtual"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIntroducao" />
 
     <Spinner
         android:id="@+id/spMedidaAtual"
@@ -52,62 +27,78 @@
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="401dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#000000"
         android:spinnerMode="dialog"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvInserirNumero" />
 
-    <Spinner
-        android:id="@+id/spMedidaPosterior"
-        android:layout_width="374dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="252dp"
-        android:backgroundTint="#000000"
-        android:spinnerMode="dialog"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnInverter"
-        android:layout_width="152dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="332dp"
-        android:text="Inverter"
-        android:textAlignment="center"
-        app:icon="@android:drawable/ic_popup_sync"
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIntroducao" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btnAplicar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aplicar"
-        tools:layout_editor_absoluteX="252dp"
-        tools:layout_editor_absoluteY="520dp" />
+        <LinearLayout
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnLimpar"
-        android:layout_width="97dp"
-        android:layout_height="51dp"
-        android:text="Limpar"
-        tools:layout_editor_absoluteX="252dp"
-        tools:layout_editor_absoluteY="616dp" />
+            <TextView
+                android:id="@+id/lblConversor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
-    <TextView
-        android:id="@+id/tvResultado"
-        android:layout_width="175dp"
-        android:layout_height="146dp"
-        android:background="#DBB1E3"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="521dp" />
+            <EditText
+                android:id="@+id/tvInserirNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="52dp"
+                android:editable="true"
+                android:ems="10"
+                android:hint="Valor"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="#090000"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblConversor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <EditText
+                android:id="@+id/tvInserirNumero2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="52dp"
+                android:editable="true"
+                android:ems="10"
+                android:hint="Valor"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="#090000"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
