@@ -15,6 +15,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener
 , View.OnClickListener {
 
@@ -104,7 +106,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             }
         }
-        txt2.setText(String.valueOf(result));
+        DecimalFormat df = new DecimalFormat("#.#####");
+        txt2.setText(df.format(result));
     }
 
     private void conversao2(){
@@ -130,7 +133,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     break;
             }
         }
-        txt1.setText(String.valueOf(result));
+        DecimalFormat df = new DecimalFormat("#.#####");
+        txt1.setText(df.format(result));
     }
 
     private void mudandoAmbiente(){
